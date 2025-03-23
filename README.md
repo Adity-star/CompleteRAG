@@ -16,7 +16,7 @@ Retrieval-Augmented Generation (RAG) is a framework that enhances language model
 
 ---
 
-## Table of Contents(#back-table)
+## Table of Contents(#table-of-contents)
 - [RAG Overview](https://github.com/Adity-star/CompleteRAG/blob/main/Rag_overview.ipynb)
 - [Query Construction](#query-construction)
 - [Query Translation](#query-translation)
@@ -44,7 +44,7 @@ The first step in RAG is formulating the query for retrieval. Depending on the t
 
 Here is a complete code [Notebook](https://github.com/Adity-star/CompleteRAG/blob/main/Rag_query_transformation_1.ipynb) for query construction and translation.  
 
-[Back to table of contents](#back-table))
+[Back to table of contents](#table-of-contents)
 ---
 
 ## Query Translation

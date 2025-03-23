@@ -57,6 +57,7 @@ Before retrieving documents, the input query is refined and transformed into a b
 
 Here is a complete code [Notebook](https://github.com/Adity-star/CompleteRAG/blob/main/Rag_query_transformation_1.ipynb) for query construction and translation.
 
+[Back to table of contents](#table-of-contents)
 ---
 
 ## Routing
@@ -70,6 +71,7 @@ Routing determines which database should be queried and how.
 
 Here is complete process of RAG Routing through code in this [Notebook](https://github.com/Adity-star/CompleteRAG/blob/main/RAG_routing.ipynb)
 
+[Back to table of contents](#table-of-contents)
 ---
 
 ## Retrieval
@@ -86,6 +88,7 @@ Once a query is routed, the system retrieves relevant documents. This step consi
 
 Here is complete process of RAG Retrivel through code in this [Notebook](https://github.com/Adity-star/CompleteRAG/blob/main/RAG_Retrivel.ipynb)
 
+[Back to table of contents](#table-of-contents)
 ---
 
 ## Indexing
@@ -105,6 +108,7 @@ Indexing optimizes document retrieval by structuring stored data efficiently.
 
 Here is complete process of RAG  Indexing and Generation through code in this [Notebook](https://github.com/Adity-star/CompleteRAG/blob/main/RAG_Indexing.ipynb)
 
+[Back to table of contents](#table-of-contents)
 ---
 
 ## Generation
@@ -118,6 +122,7 @@ The final step is generating responses based on retrieved documents.
 
 Here is complete process of RAG  Indexing and Generation through code in this [Notebook](https://github.com/Adity-star/CompleteRAG/blob/main/RAG_Indexing.ipynb)
 
+[Back to table of contents](#table-of-contents)
 ---
 
 ## Conclusion

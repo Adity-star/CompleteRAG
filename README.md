@@ -16,7 +16,7 @@ Retrieval-Augmented Generation (RAG) is a framework that enhances language model
 
 ---
 
-## Table of Contents
+## Table of Contents(#back-table)
 - [RAG Overview](https://github.com/Adity-star/CompleteRAG/blob/main/Rag_overview.ipynb)
 - [Query Construction](#query-construction)
 - [Query Translation](#query-translation)
@@ -42,8 +42,9 @@ The first step in RAG is formulating the query for retrieval. Depending on the t
 - Uses **Self-query retriever**.
 - Auto-generates metadata filters from the query to refine search results.
 
-Here is a complete code [Notebook](https://github.com/Adity-star/CompleteRAG/blob/main/Rag_query_transformation_1.ipynb) for query construction.  
+Here is a complete code [Notebook](https://github.com/Adity-star/CompleteRAG/blob/main/Rag_query_transformation_1.ipynb) for query construction and translation.  
 
+[Back to table of contents](#back-table))
 ---
 
 ## Query Translation
@@ -53,6 +54,8 @@ Before retrieving documents, the input query is refined and transformed into a b
 - **Decomposition**: Breaks down complex queries into simpler sub-queries.
 - **Step-back**: Generalizes the query to retrieve broader relevant information.
 - **HyDE (Hypothetical Document Embeddings)**: Generates hypothetical documents to enhance retrieval quality.
+
+Here is a complete code [Notebook](https://github.com/Adity-star/CompleteRAG/blob/main/Rag_query_transformation_1.ipynb) for query construction and translation.
 
 ---
 
@@ -64,6 +67,8 @@ Routing determines which database should be queried and how.
 
 ### 2. Semantic Routing
 - Uses embedding-based similarity matching to route the query to the most relevant prompt.
+
+Here is complete process of RAG Routing through code in this [Notebook](https://github.com/Adity-star/CompleteRAG/blob/main/RAG_routing.ipynb)
 
 ---
 
@@ -78,6 +83,8 @@ Once a query is routed, the system retrieves relevant documents. This step consi
 
 ### 3. Active Retrieval
 - If retrieved documents are not relevant, the system **re-retrieves** data from alternative sources (e.g., web search).
+
+Here is complete process of RAG Retrivel through code in this [Notebook](https://github.com/Adity-star/CompleteRAG/blob/main/RAG_Retrivel.ipynb)
 
 ---
 
@@ -96,6 +103,8 @@ Indexing optimizes document retrieval by structuring stored data efficiently.
 ### 4. Hierarchical Indexing
 - **RAPTOR** organizes documents in a tree-like structure with summaries at different abstraction levels.
 
+Here is complete process of RAG  Indexing and Generation through code in this [Notebook](https://github.com/Adity-star/CompleteRAG/blob/main/RAG_Indexing.ipynb)
+
 ---
 
 ## Generation
@@ -107,6 +116,8 @@ The final step is generating responses based on retrieved documents.
 ### 2. Self-RAG & RRR (Re-Retrieve & Rewrite)
 - Enhances response quality by **re-writing** the query or **re-retrieving** better documents.
 
+Here is complete process of RAG  Indexing and Generation through code in this [Notebook](https://github.com/Adity-star/CompleteRAG/blob/main/RAG_Indexing.ipynb)
+
 ---
 
 ## Conclusion
@@ -114,10 +125,6 @@ The RAG pipeline efficiently combines retrieval and generation techniques to imp
 
 ---
 
-### 🔗 References
-- Research Papers on RAG
-- OpenAI Documentation
-- LangChain & VectorDBs
 
 ---
 

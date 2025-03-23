@@ -10,49 +10,115 @@ This guide walks you through each stage of building a RAG system, from data coll
 ![Screenshot 2025-03-15 222902](https://github.com/user-attachments/assets/311a81a8-9e76-40ae-9218-ff59a648a5de)
 
 
+# Retrieval-Augmented Generation (RAG) Process
+
+Retrieval-Augmented Generation (RAG) is a framework that enhances language models by retrieving relevant information from external knowledge bases before generating responses. This improves accuracy, relevance, and contextual understanding. The process involves multiple stages, including query construction, translation, routing, retrieval, indexing, and generation.
+
+---
 
 ## Table of Contents
+- [Query Construction](#query-construction)
+- [Query Translation](#query-translation)
+- [Routing](#routing)
+- [Retrieval](#retrieval)
+- [Indexing](#indexing)
+- [Generation](#generation)
 
-1. [What is RAG?](#what-is-rag)
-2. [How RAG Works](#how-rag-works)
-3. [Setting Up the Environment](#setting-up-the-environment)
-4. [Data Collection and Preprocessing](#data-collection-and-preprocessing)
-5. [Building the Retrieval System](#building-the-retrieval-system)
-6. [Building the Generation Model](#building-the-generation-model)
-7. [Training the RAG Model](#training-the-rag-model)
-8. [Evaluation and Testing](#evaluation-and-testing)
-9. [Advanced Techniques and Improvements](#advanced-techniques-and-improvements)
-10. [Conclusion](#conclusion)
+---
 
-## What is RAG?
+## Query Construction
+The first step in RAG is formulating the query for retrieval. Depending on the type of database, different query construction methods are used:
 
-**Retrieval-Augmented Generation (RAG)** is a hybrid approach that combines **retrieval-based models** with **generation-based models** to produce better, more informative responses. It allows a model to retrieve relevant information from a large corpus of documents and use that information to generate more accurate, contextually aware outputs. RAG models are particularly useful in tasks like **question answering**, **dialog systems**, and **open-domain text generation**.
+### 1. Relational Databases (Relational DBs)
+- Uses **Text-to-SQL** conversion.
+- Converts natural language queries into SQL queries with optional vector-based search using **PGVector**.
 
-### Key Concepts:
-- **Retrieval**: The model retrieves relevant passages or documents from an external knowledge base.
-- **Generation**: The model generates text based on the retrieved information.
-- **End-to-End Training**: RAG models can be trained end-to-end, where both the retrieval and generation components are jointly optimized.
+### 2. Graph Databases (GraphDBs)
+- Uses **Text-to-Cypher** conversion.
+- Converts natural language queries into Cypher queries for Graph Databases.
 
-## How RAG Works
+### 3. Vector Databases (VectorDBs)
+- Uses **Self-query retriever**.
+- Auto-generates metadata filters from the query to refine search results.
 
-1. **Retrieval Process**: Given a query or input, the retrieval component of RAG searches a large corpus or knowledge base to find relevant documents.
-2. **Augmentation**: The retrieved documents are then used to augment the model's understanding of the query.
-3. **Generation**: A generative model, often a transformer-based architecture (e.g., T5, BART), uses the augmented information to generate an output.
+---
 
-This dual mechanism improves the performance of generative models by leveraging external knowledge for better context and accuracy.
+## Query Translation
+Before retrieving documents, the input query is refined and transformed into a better-suited format using various techniques:
+- **Multi-query**: Reformulates a single question into multiple related queries.
+- **RAG-Fusion**: Combines results from multiple queries to enhance retrieval.
+- **Decomposition**: Breaks down complex queries into simpler sub-queries.
+- **Step-back**: Generalizes the query to retrieve broader relevant information.
+- **HyDE (Hypothetical Document Embeddings)**: Generates hypothetical documents to enhance retrieval quality.
 
-## Setting Up the Environment
+---
 
-To get started, follow these steps to set up your environment for building a RAG model.
+## Routing
+Routing determines which database should be queried and how.
 
-### Prerequisites
+### 1. Logical Routing
+- The **LLM** selects the appropriate database (Relational DB, GraphDB, or VectorDB) based on the query.
 
-- Python 3.x
-- PyTorch or TensorFlow (depending on your preference)
-- Hugging Face Transformers
-- Faiss or other retrieval libraries
+### 2. Semantic Routing
+- Uses embedding-based similarity matching to route the query to the most relevant prompt.
 
-### Installation
+---
 
-```bash
-pip install torch transformers faiss-cpu datasets
+## Retrieval
+Once a query is routed, the system retrieves relevant documents. This step consists of:
+
+### 1. Ranking
+- Filters and ranks retrieved documents using methods like **Re-Rank, RankGPT, and RAG-Fusion**.
+
+### 2. Refinement
+- **CRAG (Compression-RAG)** further filters and compresses documents to improve relevance.
+
+### 3. Active Retrieval
+- If retrieved documents are not relevant, the system **re-retrieves** data from alternative sources (e.g., web search).
+
+---
+
+## Indexing
+Indexing optimizes document retrieval by structuring stored data efficiently.
+
+### 1. Chunk Optimization
+- **Semantic Splitter**: Splits text into meaningful chunks based on semantic delimiters for better embedding.
+
+### 2. Multi-Representation Indexing
+- **Parent Document, Dense X**: Converts documents into compact retrieval units, such as summaries.
+
+### 3. Specialized Embeddings
+- Uses advanced embedding models like **Fine-tuning, CoLBERT** for better retrieval.
+
+### 4. Hierarchical Indexing
+- **RAPTOR** organizes documents in a tree-like structure with summaries at different abstraction levels.
+
+---
+
+## Generation
+The final step is generating responses based on retrieved documents.
+
+### 1. Active Retrieval
+- Uses document generation quality to determine whether additional re-retrieval is needed.
+
+### 2. Self-RAG & RRR (Re-Retrieve & Rewrite)
+- Enhances response quality by **re-writing** the query or **re-retrieving** better documents.
+
+---
+
+## Conclusion
+The RAG pipeline efficiently combines retrieval and generation techniques to improve the accuracy of language models. By integrating structured and unstructured data sources, it enhances the quality of generated responses, making it a powerful framework for AI-driven applications.
+
+---
+
+### 🔗 References
+- Research Papers on RAG
+- OpenAI Documentation
+- LangChain & VectorDBs
+
+---
+
+### 🚀 Stay Connected
+If you found this helpful, feel free to contribute, star the repo ⭐, and follow for updates!
+
+

@@ -17,6 +17,7 @@ Retrieval-Augmented Generation (RAG) is a framework that enhances language model
 ---
 
 ## Table of Contents
+- [RAG Overview](https://github.com/Adity-star/CompleteRAG/blob/main/Rag_overview.ipynb)
 - [Query Construction](#query-construction)
 - [Query Translation](#query-translation)
 - [Routing](#routing)
@@ -40,6 +41,8 @@ The first step in RAG is formulating the query for retrieval. Depending on the t
 ### 3. Vector Databases (VectorDBs)
 - Uses **Self-query retriever**.
 - Auto-generates metadata filters from the query to refine search results.
+
+Here is a complete code [Notebook](https://github.com/Adity-star/CompleteRAG/blob/main/Rag_query_transformation_1.ipynb) for query construction.  
 
 ---
 

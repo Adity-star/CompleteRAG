@@ -143,10 +143,19 @@ Frameworks like **LangChain** make it easier to build RAG-based applications. Wi
 
 RAG is the key to unlocking **real-time, reliable AI applications** that work with your own data.
 
+
+
 ---
 ### Additional Reading
+
 - [LangChain RAG Concepts](https://python.langchain.com/v0.2/docs/concepts/rag/)
 - [OpenAI on Embeddings](https://platform.openai.com/docs/guides/embeddings)
 - [FAISS by Facebook AI](https://platform.openai.com/docs/guides/embeddings)
 
+---
 
+### Next
+
+In next module we will learn about LLMs and Knowledge bases.
+
+➡️ Proceed to Module 2: [LLMs and Knowledge Bases](https://github.com/Adity-star/CompleteRAG/tree/main/all_rag_techniques/02_LLMs_knowledge_bases)

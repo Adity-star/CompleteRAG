@@ -153,4 +153,4 @@ To build an effective RAG system, integrating the knowledge base with the LLM is
   ### What's Next?
   In Module 3, we will explore how RAG workflow works with LangChain, and integrate it with an LLM to build an end-to-end RAG pipeline.
 
-➡️ Proceed to Module 3: RAG Workflow
+➡️ [Proceed to Module 3: RAG Workflow](https://github.com/Adity-star/CompleteRAG/tree/main/all_rag_techniques/03_RAG_Workflow)

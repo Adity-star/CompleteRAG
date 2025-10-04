@@ -17,13 +17,15 @@ Retrieval-Augmented Generation (RAG) is a framework that enhances language model
 ---
 
 ## [Table of Contents](#table-of-contents)
-- [RAG Overview](https://github.com/Adity-star/CompleteRAG/blob/main/Rag_overview.ipynb)
+- [Introduction](https://github.com/Adity-star/CompleteRAG/tree/main/all_rag_techniques/01_Introduction#-module-1-introduction-to-retrieval-augmented-generation-rag)
+- [understanding Knowledge Bases](https://github.com/Adity-star/CompleteRAG/tree/main/all_rag_techniques/02_LLMs_knowledge_bases#-module-2-understanding-language-models--knowledge-bases)
 - [Query Construction](#query-construction)
 - [Query Translation](#query-translation)
 - [Routing](#routing)
 - [Retrieval](#retrieval)
 - [Indexing](#indexing)
 - [Generation](#generation)
+- [Advanced Rag](#advanced-rag)
 
 ---
 
@@ -123,6 +125,18 @@ The final step is generating responses based on retrieved documents.
 Here is complete process of RAG  Indexing and Generation through code in this [Notebook](https://github.com/Adity-star/CompleteRAG/blob/main/RAG_Indexing.ipynb)
 
 [Back to table of contents](#table-of-contents)
+
+---
+## Advanced Rag
+
+This project implements a sophisticated Retrieval-Augmented Generation (RAG) architecture by combining three complementary modules:
+
+| Notebook | Role / Purpose |
+|---|---|
+| [`HyDe_Hypothetical_document_embedding.ipynb`](https://github.com/Adity-star/CompleteRAG/blob/main/all_rag_techniques/HyDe_Hypothrtical_document_embedding.ipynb) | Builds dense embeddings for documents using hybrid / hypothetical embedding strategies to maximize retrieval relevance |
+| [`contextual_chunk_headers.ipynb`](https://github.com/Adity-star/CompleteRAG/blob/main/all_rag_techniques/contextual_chunk_headers.ipynb) | Splits documents into contextual chunks and associates header-level metadata to each chunk for enhanced retrieval context |
+| [`corrective_RAG.ipynb`](https://github.com/Adity-star/CompleteRAG/blob/main/all_rag_techniques/corrective_RAG.ipynb) | Wraps the retrieval + generation loop with corrective feedback to iteratively refine output and reduce hallucinations |
+
 ---
 
 ## Conclusion

@@ -9,6 +9,15 @@ This guide walks you through each stage of building a RAG system, from data coll
 
 ![Screenshot 2025-03-15 222902](https://github.com/user-attachments/assets/311a81a8-9e76-40ae-9218-ff59a648a5de)
 
+---
+## 🔗 Related Projects
+Explore more of my work:
+-  [Complete Data Science](https://github.com/Adity-star/Complete-DataScience-Guide): A deep dive into Data Science AI concepts, tools, and projects and all the material for learning and interview preparation.
+-  [LangChain-Mastery](https://github.com/Adity-star/LangChainMastery): Everything you need to master LangChain for building powerful LLM applications.
+-  [MCP-YFinance-Server](https://github.com/Adity-star/mcp-yfinance-server): A backend service for financial analytics and modeling.
+-  [Reinforcement-Learning](https://github.com/Adity-star/Reinforcement-Learning): Hands-on experiments and theory in Reinforcement Learning.
+- [GenAI-Learnings](https://github.com/Adity-star/GenAI-Learnings): A deep dive into Generative AI concepts, tools, and projects.
+---
 
 # Retrieval-Augmented Generation (RAG) Process
 
